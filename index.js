@@ -1,8 +1,10 @@
 // server
 var express = require('express');
 var app = express();
-var ejs = require('ejs')
+var bodyParser = require('body-parser');
 app.set('port', process.env.PORT || 5000);
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.set("view engine", "ejs");
 
 // Our first route
