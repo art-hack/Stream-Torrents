@@ -1,6 +1,7 @@
 // server
 var express = require('express');
 var app = express();
+var ejs = require('ejs')
 app.set('port', process.env.PORT || 5000);
 app.set("view engine", "ejs");
 
